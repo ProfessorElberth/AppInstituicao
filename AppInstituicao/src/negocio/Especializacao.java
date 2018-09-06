@@ -10,7 +10,7 @@ public class Especializacao extends Curso {
 	}
 	
 	public void show() {
-		System.out.println("#especializacao");
+		System.out.printf("\n#especializacao\n");
 
 		super.show();
 		

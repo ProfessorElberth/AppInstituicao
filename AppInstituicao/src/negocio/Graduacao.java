@@ -1,8 +1,8 @@
 package negocio;
 
 public class Graduacao extends Curso {
-
 	private boolean tecnologo;
+	private Documentacao documentacao;
 	
 	public Graduacao(String nome, int cargaHoraria, float valor, boolean tecnologo) {
 		super(nome, cargaHoraria, valor);
@@ -10,7 +10,7 @@ public class Graduacao extends Curso {
 	}
 
 	public void show() {
-		System.out.println("#graduacao");
+		System.out.printf("\n#graduacao\n");
 		
 		super.show();
 		
@@ -18,6 +18,8 @@ public class Graduacao extends Curso {
 				"Tecnólogo: %s\n\n",
 			  tecnologo ? "sim" : "não"
 			);
+		
+		documentacao.show();
 	}
 
 	public boolean isTecnologo() {
@@ -25,5 +27,11 @@ public class Graduacao extends Curso {
 	}
 	public void setTecnologo(boolean tecnologo) {
 		this.tecnologo = tecnologo;
+	}
+	public Documentacao getDocumentacao() {
+		return documentacao;
+	}
+	public void setDocumentacao(Documentacao documentacao) {
+		this.documentacao = documentacao;
 	}
 }
